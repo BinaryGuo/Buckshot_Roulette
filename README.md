@@ -21,10 +21,11 @@
 - 增加两个回合
 - 增加图形界面（pygame）
 
-### debug
-- 降低在高帧率下的高灵敏度问题
-- 增加获取功能
-
+### debuging
+- BUG1 降低在高帧率下的高灵敏度问题
+- BUG2 增加获取屏幕尺寸功能
+- BUG3 兼容windows系统
+- BUG4 IDLE无法自动关闭
 
 ## 程序说明
 - 你可以看到在每个.py文件开头简短的说明
@@ -40,7 +41,7 @@
 > \>>> from bulletroulette.run import run
 > \>>> run()
 
-(终止时需按下^C ^D)
+(终止时需在shell上按下^C ^D)
 
 ### 目录结构（在/bulletroulette下）
 /
@@ -52,30 +53,40 @@
     assets/
         A.png  
         B.png
-        C.png
-        .
-        .
-        .
-        X.png
-        Y.png
-        Z.png
-        bgmsc.ogg
-        blank.wav
-        .
-        .
-        .
+        C.png  
+        .  
+        .  
+        .  
+        X.png  
+        Y.png  
+        Z.png  
+        bgmsc.ogg  
+        blank.wav  
+        .  
+        .  
+        .  
         (素材若干)
+
+### 游戏规则
+在运行程序后，程序会让您指定游戏模式，建议选择窗口（如果是开发人员请忽略此建议）。
+#### 窗口模式
+1. 在选择窗口模式后，会让您设置帧率（建议设置为25以下，见BUG1）。
+2. 设置好帧率后会弹出一个窗口，让您输入名称（鼠标）
+3. 设置好名称后正式进入游戏，游戏分为三轮，每论结束后会弹出 <您的名字> WIN!（第三轮结束后需手动终止（shell按下^C ^D），见BUG4），每一轮有若干发子弹，显示一次子弹为一小轮
+4. 每一轮会先显示子弹（红色为实弹，灰色为空弹），显示后子弹顺序会被打乱
+5. 每一小轮都是玩家先手，用鼠标选择枪后可点击DEALER射击对面，点击自己名字射击自己（左边为您和对面的血量）
+6. 如果您选择射击对面，不管是空弹还是实弹，下一回合都是对面开枪。如果您选择射击自己，如果是实弹下一回合就该对面开枪，如果是空弹，下一回合还是您射击。（如果是实弹会听到“砰！”，如果是空弹会听到“咔...”）
 
 
 ## 道歉
 - 不好意思，此版本没有提供开发接口，README也写的不多，请见凉！
-- 不好意思，由于之前upload比较匆忙，没来得及改README上的协议（CC-BY-SA 3.0），assets目录下还有个临时存放的二维码没有删，请见凉。
+- 不好意思，由于之前upload比较匆忙，没来得及改README上的协议，assets目录下还有个临时存放的二维码没有删，请见凉。
 
 
 ## 问题解决
 ### 找不到版本（安装问题）
-> ERROR: Could not find a version that satisfies the requirement bulletroulette (from versions: none)
+> ERROR: Could not find a version that satisfies the requirement bulletroulette (from versions: none)  
 > ERROR: No matching distribution found for bulletroulette
 
-原因：Python版本小于3.8
+原因：Python版本小于3.8  
 解决办法：重装一个Python3.8以上的版本
