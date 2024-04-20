@@ -1,15 +1,15 @@
 import setuptools
-with open("README.md", "r") as fh:
+with open("README.md", "r", encoding="utf-8") as fh:
     long_description = fh.read()
 setuptools.setup(
     name="bulletroulette",  # 模块名称
-    version="1.0.3",  # 当前版本
+    version="1.1.1",  # 当前版本
     author="GQX",  # 作者
     author_email="kill114514251@outlook.com",  # 作者邮箱
     description="模仿steam游戏“恶魔轮盘”，目前没有提供开发接口（只能单纯玩）",  # 模块简介
     long_description=long_description,  # 模块详细介绍
     long_description_content_type="text/markdown",  # 模块详细介绍格式
-    url="https://github.com/BinaryGuo/Buckshot_Roulette",  # 模块github地址
+    url="https://github.com/BinaryGuo/Bullet_Roulette",  # 模块github地址
     packages=setuptools.find_packages(),  # 自动找到项目中导入的模块
     include_package_data=True,
     package_data={
@@ -18,11 +18,11 @@ setuptools.setup(
     # 模块相关的元数据
     classifiers=[
         "Intended Audience :: End Users/Desktop",
-        "Development Status :: 5 - Production/Stable",
+        "Development Status :: 3 - Alpha",
         "Topic :: Software Development :: Libraries :: pygame",
         "Natural Language :: Chinese (Simplified)",
         "License :: OSI Approved :: MIT License",
-        "Operating System :: POSIX :: Linux",
+        "Operating System :: OS Independent",
         "Programming Language :: Python :: 3.13",
         "Programming Language :: Python :: 3.12",
         "Programming Language :: Python :: 3.11",
